@@ -65,7 +65,7 @@
   header{position:fixed; top:0; left:0; right:0; z-index:50; height:82px; display:flex; align-items:center;
     padding-top:env(safe-area-inset-top,0px); background:rgba(10,27,43,.92); backdrop-filter:blur(14px); border-bottom:1px solid rgba(255,255,255,.08);}
   nav.bar{width:min(1240px,88vw); margin:0 auto; display:flex; align-items:center; gap:34px;}
-  .logo-img{height:40px; width:auto; margin-right:8px;}
+  .logo-img{height:36px; width:auto; margin-right:8px;}
   .logo-link{display:flex; align-items:center; flex:0 0 auto;}
   .logo-link:focus-visible{outline:2px solid var(--gold-light); outline-offset:4px;}
   .navlinks{display:flex; gap:28px; margin-right:auto;}
@@ -250,7 +250,7 @@
   .hx-node:hover .hx-spoke,.hx-node.active .hx-spoke{stroke:var(--gold); stroke-opacity:1; stroke-width:2.4;}
   .hx-node:hover .hx-a,.hx-node.active .hx-a{font-weight:600;}
   .hx-node:focus-visible .hx-hit{stroke:var(--gold); stroke-width:1.5; stroke-dasharray:4 4;}
-  .hx-logo{position:absolute; left:50%; top:50%; width:14.88%; height:auto; transform:translate(-50%,-50%); pointer-events:none; z-index:1; background:var(--bg); padding:6px 10px; box-sizing:content-box; border-radius:8px;}
+  .hx-logo{position:absolute; left:50%; top:50%; margin-left:0.252%; width:14.88%; height:auto; transform:translate(-50%,-50%); pointer-events:none; z-index:1; background:var(--bg); padding:6px 10px; box-sizing:content-box; border-radius:8px;}
   .hx-desc{max-width:640px; margin:8px auto 0; text-align:center; min-height:96px;}
   .hx-desc b{font-size:22px; font-weight:600; letter-spacing:var(--track);}
   .hx-desc b em{font-style:normal; font-size:15px; color:var(--gold); font-weight:600; margin-left:10px; letter-spacing:.04em;}
@@ -341,7 +341,7 @@
       <div class="prow"><dt data-i18n="p_rep">대표</dt><dd data-i18n="rep_name">정현우</dd></div>
       <div class="prow"><dt data-i18n="p_biz">사업분야</dt><dd data-i18n="p_biz_v">컨설팅 · 투자 · 유통 · 무역&amp;소싱</dd></div>
       <div class="prow"><dt data-i18n="p_ptn">파트너십</dt><dd data-i18n="p_ptn_v">법무법인 윈콘(중국) · 법률사무소 엘앤제이(한국) · Buff by AuthPay 공식 에이전시 · BMP China(설립 예정)</dd></div>
-      <div class="prow"><dt data-i18n="p_loc">소재지</dt><dd data-i18n="ct_addr">제주특별자치도 제주시 남광북1길 1<br>제주법조타워 2층</dd></div>
+      <div class="prow"><dt data-i18n="p_loc">소재지</dt><dd data-i18n="ct_addr">제주특별자치도 서귀포시 서호중앙로 55<br>유포리아 825호</dd></div>
       <div class="prow"><dt data-i18n="p_ct">연락처</dt><dd>jeong@bmpartners.kr</dd></div>
     </dl>
   </div>
@@ -528,8 +528,8 @@
       <div class="reveal">
         <p class="rep-name" data-i18n="rep_name">정현우</p>
         <a class="email" href="mailto:jeong@bmpartners.kr">jeong@bmpartners.kr</a>
-        <p data-i18n="ct_addr">제주특별자치도 제주시 남광북1길 1<br>제주법조타워 2층</p>
-        <a class="findus" data-i18n="ct_map" href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%EB%B2%95%EC%A1%B0%ED%83%80%EC%9B%8C" target="_blank" rel="noopener">오시는 길 ↗</a>
+        <p data-i18n="ct_addr">제주특별자치도 서귀포시 서호중앙로 55<br>유포리아 825호</p>
+        <a class="findus" data-i18n="ct_map" href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%84%9C%EA%B7%80%ED%8F%AC%EC%8B%9C%20%EC%84%9C%ED%98%B8%EC%A4%91%EC%95%99%EB%A1%9C%2055" target="_blank" rel="noopener">오시는 길 ↗</a>
       </div>
     </div>
   </div>
@@ -595,7 +595,7 @@ const I18N = {
     val_quote:"“고객(사) 중심의 창의적 사고와 끊임없는 노력으로 고객(사)의 니즈에 적합한 솔루션을 제공합니다.”",
     val1_t:"고객 최우선", val2_t:"책임감 있는", val3_t:"소통과 협력", val4_t:"끝없는 도전",
     ct_eyebrow:"CONTACT", ct_title:"사업 제휴 문의를 기다리고 있습니다.",
-    ct_addr:"제주특별자치도 제주시 남광북1길 1<br>제주법조타워 2층",
+    ct_addr:"제주특별자치도 서귀포시 서호중앙로 55<br>유포리아 825호",
     ct_map:"오시는 길 ↗",
     footer_tag:"Business · Consulting · Trade"
   },
@@ -646,7 +646,7 @@ const I18N = {
     val_quote:"“We bring creative, client-first thinking and relentless effort to every solution we build.”",
     val1_t:"Client First", val2_t:"Accountable", val3_t:"Collaborative", val4_t:"Relentless",
     ct_eyebrow:"CONTACT", ct_title:"We'd love to hear about your business.",
-    ct_addr:"2F, Jeju Law Tower, 1 Namgwangbuk 1-gil<br>Jeju-si, Jeju, Korea",
+    ct_addr:"Room 825, Euphoria, 55 Seohojungang-ro<br>Seogwipo-si, Jeju, Korea",
     ct_map:"Get Directions ↗",
     footer_tag:"Business · Consulting · Trade"
   },
@@ -697,7 +697,7 @@ const I18N = {
     val_quote:"“以客户为中心的创意思考与不懈努力，提供契合客户需求的解决方案。”",
     val1_t:"客户至上", val2_t:"尽职尽责", val3_t:"协作共进", val4_t:"锐意进取",
     ct_eyebrow:"联系我们", ct_title:"期待与您携手合作。",
-    ct_addr:"济州特别自治道济州市南光北1路1<br>济州法律大厦2楼",
+    ct_addr:"济州特别自治道西归浦市西好中央路55号<br>Euphoria 825室",
     ct_map:"查看地图 ↗",
     footer_tag:"商务 · 咨询 · 贸易"
   }
