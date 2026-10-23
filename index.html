@@ -28,7 +28,7 @@
     --paper:#F5F4EF; --putty:#E9E5DB; --white:#FFFFFF;
     --gold:#C9A95A; --gold-light:#E3C583;
     --ink:#14181D; --muted:#66717A; --line:#D9D6CE;
-    --bg:var(--white); --fg:var(--ink);
+    --bg:#F3F1EA; --fg:var(--ink);
     box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:var(--navy); --fg:#EDEAE2; --paper:#101C2E; --putty:#101C2E; --line:#233650; --muted:#93A0AD;}}
 :root[data-theme="dark"]{--bg:var(--navy); --fg:#EDEAE2; --paper:#101C2E; --putty:#101C2E; --line:#233650; --muted:#93A0AD;}
@@ -243,7 +243,7 @@ body{font-size:17px}
 .contact .email{border-color:var(--gold);color:#0A1B2B}
 .contact .rep-name,.contact p{color:#66717A}
 .contact .findus{color:#0A1B2B;border-color:var(--gold)}
-:root,:root:not([data-theme="light"]),:root[data-theme="dark"]{color-scheme:light;--bg:#FFFFFF;--fg:#14181D;--paper:#F5F4EF;--putty:#E9E5DB;--line:#D9D6CE;--muted:#66717A}
+:root,:root:not([data-theme="light"]),:root[data-theme="dark"]{color-scheme:light;--bg:#F3F1EA;--fg:#14181D;--paper:#FBFAF6;--putty:#E9E5DB;--line:#DDD9CE;--muted:#66717A}
 .navlinks a:last-child{background:none;color:#C9CFDA;padding:0;font-weight:400}
 .navlinks a:last-child:hover{color:var(--gold-light)}
 .hero .hero-inner{max-width:min(1240px,88vw)}
@@ -261,22 +261,22 @@ body{font-size:17px}
 .bu:hover{transform:translateY(-4px)}
 @media (max-width:900px){#portfolio .wrap{grid-template-columns:1fr}}
 #about,#business,#china{background:var(--navy);color:#fff;--bg:#0A1B2B;--fg:#EDEAE2;--muted:#A9B4C0;--line:rgba(255,255,255,.16);--paper:#101C2E;--putty:#101C2E}
-#track,#portfolio,#values{background:#fff;color:#14181D;--bg:#FFFFFF;--fg:#14181D;--muted:#66717A;--line:#D9D6CE;--paper:#F5F4EF;--putty:#E9E5DB}
+#track,#portfolio,#values{background:#F3F1EA;color:#14181D;--bg:#F3F1EA;--fg:#14181D;--muted:#66717A;--line:#DDD9CE;--paper:#FBFAF6;--putty:#E9E5DB}
 #about .greeting-sign .gs-logo{height:48.6px;width:auto;flex:0 0 auto}
 #track .section-head{color:#0A1B2B !important}
 #track .lead{color:#66717A !important}
-#track .process-item{background:#F5F4EF}
+#track .process-item{background:#FBFAF6}
 #track .process-item .pnum{color:#B08F3E}
 #track .process-item h3{color:#0A1B2B}
 #track .process-item p{color:#66717A}
 #portfolio .section-head{color:#0A1B2B}
 #portfolio .label{border-color:var(--line)}
-#portfolio .bu{background:#F5F4EF;border:1px solid #D9D6CE;border-top:2px solid var(--gold);color:#14181D}
-#portfolio .bu:hover{background:#fff;border-color:var(--gold);box-shadow:0 10px 28px rgba(10,27,43,.08)}
+#portfolio .bu{background:#FBFAF6;border:1px solid #DDD9CE;border-top:2px solid var(--gold);color:#14181D}
+#portfolio .bu:hover{background:#FDFCF9;border-color:var(--gold);box-shadow:0 10px 28px rgba(10,27,43,.08)}
 #portfolio .bu h3{color:#0A1B2B}
 #portfolio .bu-o{color:#66717A}
 #portfolio .bu dd{color:#14181D}
-#portfolio .bu dt{border-color:#D9D6CE;color:#B08F3E}
+#portfolio .bu dt{border-color:#DDD9CE;color:#B08F3E}
 #portfolio .bu-tag{color:#B08F3E}
 #values .label{border-color:var(--line)}
 .stat-band{background:var(--navy-tint);border-bottom:1px solid rgba(255,255,255,.08)}
@@ -314,7 +314,7 @@ body{font-size:17px}
 .vmap{position:relative;display:grid;grid-template-columns:repeat(4,1fr)}
 .vmap:before{content:"";position:absolute;left:12.5%;right:12.5%;top:60px;height:1px;background:var(--gold);opacity:.55}
 .vi{position:relative;text-align:center;padding:0 12px}
-.vi .ic{position:relative;z-index:1;width:120px;height:120px;margin:0 auto 26px;border-radius:50%;background:var(--navy);display:grid;place-items:center;box-shadow:0 0 0 8px #fff;transition:transform .3s}
+.vi .ic{position:relative;z-index:1;width:120px;height:120px;margin:0 auto 26px;border-radius:50%;background:var(--navy);display:grid;place-items:center;box-shadow:0 0 0 8px #F3F1EA;transition:transform .3s}
 .vi:hover .ic{transform:translateY(-4px)}
 .vi svg{width:58px;height:58px;fill:none;stroke:var(--gold-light);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
 .vi .vn{font-size:15.5px;letter-spacing:.14em;color:#B08F3E;font-weight:700}
