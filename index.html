@@ -314,6 +314,19 @@ html[data-lang="kr"],html[data-lang="cn"]{--ls-label:.06em;}
 .prow dd,.al-name,.bu-o,.bu dd,.process-item p,.hx-item p,.contact p,.profile dd{font-size:var(--fs-body);}
 .nl-note,.hx-desc p,.sb-l,footer p,.greeting-sign .gs-text{font-size:var(--fs-small);}
 .process-item h3,.hx-item h3{font-size:22px;}
+
+/* ===== 렌더링 점검 보정 ===== */
+.contact .title{border-left-color:var(--navy);}
+footer p{font-size:15px;}
+footer .fwrap{grid-template-columns:1.1fr 1fr 1.5fr;}
+footer .fright p{white-space:nowrap;}
+@media (max-width:900px){footer .fwrap{grid-template-columns:1fr;} footer .fright p{white-space:normal;}}
+
+/* ===== 히어로 배경: 한·중 연결 모티프 (정적) ===== */
+.hero{background:radial-gradient(ellipse 60% 70% at 78% 45%,#102c45 0%,transparent 70%),#07131F;}
+.hero:before{content:""; position:absolute; inset:0; background:radial-gradient(rgba(255,255,255,.16) 1px,transparent 1.6px) 0 0/34px 34px; -webkit-mask-image:linear-gradient(90deg,transparent 30%,#000 85%); mask-image:linear-gradient(90deg,transparent 30%,#000 85%);}
+.hero-bg{position:absolute; right:3vw; top:50%; transform:translateY(-50%); width:min(46vw,640px); height:auto; pointer-events:none;}
+@media (max-width:900px){.hero-bg{display:none;}}
 </style>
 </head>
 <body>
@@ -345,6 +358,14 @@ html[data-lang="kr"],html[data-lang="cn"]{--ls-label:.06em;}
 </header>
 
 <section class="hero" id="hero">
+  <svg class="hero-bg" viewBox="0 0 600 500" fill="none" aria-hidden="true">
+    <path d="M150 150 Q330 20 455 335" stroke="#C9A95A" stroke-width="1.5" stroke-dasharray="2 8" stroke-linecap="round" opacity=".9"/>
+    <g stroke="#C9A95A"><circle cx="150" cy="150" r="22" opacity=".45"/><circle cx="150" cy="150" r="46" opacity=".2"/>
+    <circle cx="455" cy="335" r="22" opacity=".45"/><circle cx="455" cy="335" r="46" opacity=".2"/></g>
+    <circle cx="150" cy="150" r="6" fill="#C9A95A"/><circle cx="455" cy="335" r="6" fill="#C9A95A"/>
+    <g fill="#C9A95A" font-size="13" font-weight="600" letter-spacing="4" font-family="Montserrat,sans-serif">
+      <text x="150" y="100" text-anchor="middle">CHINA</text><text x="455" y="398" text-anchor="middle">KOREA</text></g>
+  </svg>
   <div class="wrap hero-inner">
     <div class="eyebrow" data-i18n="hero_eyebrow">BUSINESS MANAGEMENT PARTNERS</div>
     <h1>
