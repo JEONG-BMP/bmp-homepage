@@ -327,6 +327,31 @@ footer .fright p{white-space:nowrap;}
 .hero:before{content:""; position:absolute; inset:0; background:radial-gradient(rgba(255,255,255,.16) 1px,transparent 1.6px) 0 0/34px 34px; -webkit-mask-image:linear-gradient(90deg,transparent 30%,#000 85%); mask-image:linear-gradient(90deg,transparent 30%,#000 85%);}
 .hero-bg{position:absolute; right:3vw; top:50%; transform:translateY(-50%); width:min(46vw,640px); height:auto; pointer-events:none;}
 @media (max-width:900px){.hero-bg{display:none;}}
+/* 05 GLOBAL NETWORK : 상단 제목 + 동일 폭 3단 */
+.gn-intro{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); column-gap:40px; row-gap:22px; align-items:end; margin-bottom:72px;}
+.gn-intro .mega{grid-column:span 2;}
+.gn-intro .lead{margin:0;}
+.gn{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); grid-template-rows:repeat(5,auto); column-gap:40px;}
+.gn .nl{display:grid; grid-row:span 5; grid-template-rows:subgrid; row-gap:0; margin:0;}
+.gn .nl-head{border-top:2px solid var(--gold); padding-top:24px; padding-bottom:22px;}
+.gn .nl .agency-list{display:grid; grid-row:span 3; grid-template-rows:subgrid; margin:0;}
+.gn .nl .al-row{grid-template-columns:minmax(0,1fr); gap:8px; align-content:start; padding:20px 0;}
+.gn .nl h4{line-height:1.35;}
+.gn-intro .nw{display:block;}
+.gn .al-name{line-height:1.55; word-break:keep-all; overflow-wrap:break-word;}
+.gn .nl-note{margin-top:16px; word-break:keep-all;}
+@media (max-width:1000px){
+.gn-intro{grid-template-columns:1fr; margin-bottom:48px;}
+.gn-intro .mega{grid-column:auto;}
+.gn{display:block;}
+.gn .nl{display:block; margin-bottom:48px;}
+.gn .nl:last-child{margin-bottom:0;}
+.gn .nl .agency-list{display:block;}
+.gn .nl .al-row{grid-template-columns:140px minmax(0,1fr); gap:16px;}
+}
+@media (max-width:560px){
+.gn .nl .al-row{grid-template-columns:minmax(0,1fr); gap:6px;}
+}
 </style>
 </head>
 <body>
@@ -382,7 +407,7 @@ footer .fright p{white-space:nowrap;}
   <div class="wrap">
     <div class="sb"><span class="sb-n"><span class="counter" data-target="30">30</span><small>+</small></span><span class="sb-l" data-i18n="sb1">년 중국 현장 경험</span></div>
     <div class="sb"><span class="sb-n"><span class="counter" data-target="6">6</span></span><span class="sb-l" data-i18n="sb2">사업영역</span></div>
-    <div class="sb"><span class="sb-n"><span class="counter" data-target="5">5</span></span><span class="sb-l" data-i18n="sb3">개국 글로벌 네트워크<br>미국·한국·중국·인도·러시아</span></div>
+    <div class="sb"><span class="sb-n"><span class="counter" data-target="5">5</span></span><span class="sb-l" data-i18n="sb3">개국 글로벌 네트워크<br>한국·중국·미국·인도·러시아</span></div>
   </div>
 </div>
 
@@ -398,7 +423,7 @@ footer .fright p{white-space:nowrap;}
     <dl class="profile reveal">
       <div class="prow"><dt data-i18n="p_rep">대표</dt><dd data-i18n="rep_name">정현우</dd></div>
       <div class="prow"><dt data-i18n="p_biz">사업분야</dt><dd data-i18n="p_biz_v">컨설팅 · 에이전시 · 투자 · 소싱 · 유통 · 무역</dd></div>
-      <div class="prow"><dt data-i18n="p_ptn">파트너십</dt><dd data-i18n="p_ptn_v">법률행정지원 파트너 3개사 · 협력 파트너 7개사(미국·한국·중국) · BMP China(설립 예정)</dd></div>
+      <div class="prow"><dt data-i18n="p_ptn">파트너십</dt><dd data-i18n="p_ptn_v">법률행정지원 파트너 3개사 · 협력 파트너 7개사(한국·중국·미국) · BMP China(설립 예정)</dd></div>
       <div class="prow"><dt data-i18n="p_loc">소재지</dt><dd data-i18n="ct_addr">제주특별자치도 제주시 남광북1길 1<br>법조타워 605호</dd></div>
       <div class="prow"><dt data-i18n="p_ct">연락처</dt><dd>jeong@bmpartners.kr</dd></div>
     </dl>
@@ -507,33 +532,38 @@ footer .fright p{white-space:nowrap;}
 <section id="china">
   <div class="wrap">
     <div class="label reveal"><span>05</span><span data-i18n="cn_tag">GLOBAL NETWORK</span></div>
-    <div class="split">
-      <div class="reveal">
-        <h2 class="mega" data-i18n="cn_title">미국·한국·중국의 파트너사와 함께합니다.</h2>
-        <p class="lead" style="margin-top:20px;" data-i18n="cn_desc">파트너사 가운데 공식 에이전시 계약을 맺은 곳은 시장 진출, 소싱, 유통 업무를 지원하고, 그 밖의 파트너사와는 사업별로 협력합니다.</p>
-        <div class="agency-list" style="margin-top:44px">
-          <div class="al-row"><span class="al-country" data-i18n="al_c1">USA</span><span class="al-name" data-i18n="al_c1v">AuthPay</span></div>
+    <div class="gn-intro reveal">
+      <h2 class="mega" data-i18n="cn_title">한국·중국·미국의 파트너사와 함께합니다.</h2>
+      <p class="lead" data-i18n="cn_desc">파트너사 가운데 공식 에이전시 계약을 맺은 곳은 시장 진출, 소싱, 유통 업무를 지원하고, 그 밖의 파트너사와는 사업별로 협력합니다.</p>
+    </div>
+    <div class="gn reveal">
+      <div class="nl">
+        <div class="nl-head"><span class="mini" data-i18n="bp_tag">BUSINESS PARTNERS</span><h4 data-i18n="bp_t">협력 파트너</h4></div>
+        <div class="agency-list">
           <div class="al-row"><span class="al-country" data-i18n="al_c2">KOREA</span><span class="al-name" data-i18n="al_c2v">코리아다올 · 에이뷰</span></div>
           <div class="al-row"><span class="al-country" data-i18n="al_c3">CHINA</span><span class="al-name">智子 · 贝嘉宁硅业 · 星辰锂能 · 龙兴钛业</span></div>
+          <div class="al-row"><span class="al-country" data-i18n="al_c1">USA</span><span class="al-name" data-i18n="al_c1v">AuthPay</span></div>
         </div>
       </div>
-      <div class="reveal">
-        <div class="nl">
-<span class="mini" data-i18n="lg_tag">LEGAL &amp; ADMIN SUPPORT</span><h4 data-i18n="lg_t">법률행정지원 파트너</h4>
-<div class="agency-list"><div class="al-row"><span class="al-country" data-i18n="pt1_r">법률</span><span class="al-name"><b data-i18n="pt1_n">법률사무소 엘앤제이</b><em data-i18n="pt1_p">이승룡 변호사</em></span></div><div class="al-row"><span class="al-country" data-i18n="pt2_r">세무 · 회계</span><span class="al-name"><b data-i18n="pt2_n">이승록 세무회계컨설팅</b><em data-i18n="pt2_p">이승록 세무사</em></span></div><div class="al-row"><span class="al-country" data-i18n="pt3_r">출입국 · 행정</span><span class="al-name"><b data-i18n="pt3_n">제중출입국행정사 사무소</b><em data-i18n="pt3_p">양승철 행정사</em></span></div></div>
-<p class="nl-note" data-i18n="lg_note">법률·세무·출입국 행정까지, 한중 사업에 필요한 전문 지원을 함께합니다.</p>
-</div>
-        <div class="nl">
-          <span class="mini" data-i18n="ent_tag">GROUP ENTITY</span><h4>BMP China</h4>
-          <div class="agency-list">
-            <div class="al-row"><span class="al-country" data-i18n="ent_loc_k">거점</span><span class="al-name" data-i18n="ent_loc_v">베이징 (Beijing)</span></div>
-            <div class="al-row"><span class="al-country" data-i18n="ent_est_k">설립</span><span class="al-name" data-i18n="ent_est_v">2026년 12월 설립 예정</span></div>
-            <div class="al-row"><span class="al-country" data-i18n="ent_role_k">역할</span><span class="al-name" data-i18n="ent_role_v">중국 현지 에이전시 · 소싱 · 유통 · 무역</span></div>
-          </div>
+      <div class="nl">
+        <div class="nl-head"><span class="mini" data-i18n="lg_tag">LEGAL &amp; ADMIN SUPPORT</span><h4 data-i18n="lg_t">법률행정지원 파트너</h4></div>
+        <div class="agency-list">
+          <div class="al-row"><span class="al-country" data-i18n="pt1_r">법률</span><span class="al-name"><b data-i18n="pt1_n">법률사무소 엘앤제이</b><em data-i18n="pt1_p">이승룡 변호사</em></span></div>
+          <div class="al-row"><span class="al-country" data-i18n="pt2_r">세무 · 회계</span><span class="al-name"><b data-i18n="pt2_n">이승록 세무회계컨설팅</b><em data-i18n="pt2_p">이승록 세무사</em></span></div>
+          <div class="al-row"><span class="al-country" data-i18n="pt3_r">출입국 · 행정</span><span class="al-name"><b data-i18n="pt3_n">제중출입국행정사 사무소</b><em data-i18n="pt3_p">양승철 행정사</em></span></div>
         </div>
+        <p class="nl-note" data-i18n="lg_note">법률·세무·출입국 행정까지, 한중 사업에 필요한 전문 지원을 함께합니다.</p>
       </div>
+      <div class="nl">
+        <div class="nl-head"><span class="mini" data-i18n="ent_tag">GROUP ENTITY</span><h4>BMP China</h4></div>
+        <div class="agency-list">
+          <div class="al-row"><span class="al-country" data-i18n="ent_loc_k">거점</span><span class="al-name" data-i18n="ent_loc_v">베이징 (Beijing)</span></div>
+          <div class="al-row"><span class="al-country" data-i18n="ent_est_k">설립</span><span class="al-name" data-i18n="ent_est_v">2026년 12월 설립 예정</span></div>
+          <div class="al-row"><span class="al-country" data-i18n="ent_role_k">역할</span><span class="al-name" data-i18n="ent_role_v">중국 현지 에이전시 · 소싱 · 유통 · 무역</span></div>
+        </div>
       </div>
     </div>
+  </div>
 </section>
 
 <section id="values">
@@ -609,7 +639,7 @@ const I18N = {
     hx_sourcing_d: "합리적인 가격의 우수한 생산자를 발굴해 조달합니다",
     hx_agency_a: "에이전시",
     hx_agency_b: "Agency",
-    hx_agency_d: "미국·한국·중국 파트너사 중 에이전시 계약을 맺은 곳의 시장 진출과 유통을 지원합니다",
+    hx_agency_d: "한국·중국·미국 파트너사 중 에이전시 계약을 맺은 곳의 시장 진출과 유통을 지원합니다",
     about_eyebrow: "EXPERIENCE",
     about_title: "30년 중국 경험을 비즈니스의 현장으로",
     about_p1: "bmp 대표는 베이징대학을 졸업하고 스타트업, 한국 대기업, 중국 2차전지 설비업체에서 HRM·HRIS·경영전략 직무를 담당하며 30년간 중국을 경험한 지역전문가입니다. 베이징현대자동차 1st 벤더 경영, LGE 투자 프로젝트, 대기업 ERP HR컨설팅, 2차전지 양극재 생산라인 EPC 등 굵직한 현장 경험을 바탕으로 고객의 요구에 최적화된 솔루션을 제시합니다.",
@@ -619,7 +649,7 @@ const I18N = {
     greet_text: "안녕하십니까, bmp 비엠파트너스를 찾아주셔서 감사합니다.<br>저희는 30년간 한국과 중국 현장을 오가며 쌓은 경험을 바탕으로, 컨설팅부터 유통·무역까지 고객사의 성장에 필요한 실행력을 제공합니다. 신뢰를 최우선 가치로 삼아, 앞으로도 고객과 함께 성장하는 파트너가 되겠습니다.",
     greet_role: "비엠파트너스 대표",
     p_ptn: "파트너십",
-    p_ptn_v: "법률행정지원 파트너 3개사 · 협력 파트너 7개사(미국·한국·중국) · BMP China(설립 예정)",
+    p_ptn_v: "법률행정지원 파트너 3개사 · 협력 파트너 7개사(한국·중국·미국) · BMP China(설립 예정)",
     p_loc: "소재지",
     p_ct: "연락처",
     rep_name: "정현우",
@@ -629,8 +659,10 @@ const I18N = {
     svc_eyebrow: "BUSINESS",
     svc_title: "컨설팅&nbsp;· 에이전시&nbsp;· 투자&nbsp;· 소싱&nbsp;· 유통&nbsp;· 무역, 사업영역을 하나로 연결합니다.",
     cn_tag: "GLOBAL NETWORK",
-    cn_title: "미국·한국·중국의 파트너사와 함께합니다.",
+    cn_title: "한국·중국·미국의 파트너사와 함께합니다.",
     cn_desc: "파트너사 가운데 공식 에이전시 계약을 맺은 곳은 시장 진출, 소싱, 유통 업무를 지원하고, 그 밖의 파트너사와는 사업별로 협력합니다.",
+    bp_tag: "BUSINESS PARTNERS",
+    bp_t: "협력 파트너",
     al_c1: "USA",
     al_c1v: "AuthPay",
     al_c2: "KOREA",
@@ -693,7 +725,7 @@ const I18N = {
     wt_b: "시설 임차형 운영, 파트너 협업 구조",
     sb1: "년 중국 현장 경험",
     sb2: "사업영역",
-    sb3: "개국 글로벌 네트워크<br>미국·한국·중국·인도·러시아",
+    sb3: "개국 글로벌 네트워크<br>한국·중국·미국·인도·러시아",
     hq_tag: "소싱 · 유통 · 무역 · BMP China",
     hq_t: "중국 소싱 · 유통 · 무역",
     hq_o: "중국 소싱과 유통·무역을 수행하며, 호텔 객실관리설비 납품 대행과 무역 자금 운용까지 함께하는 사업",
@@ -732,7 +764,7 @@ const I18N = {
     hx_sourcing_d: "Finding excellent producers at fair prices and securing supply",
     hx_agency_a: "Agency",
     hx_agency_b: "",
-    hx_agency_d: "Official agent for selected partners in the US, Korea and China, supporting market entry and distribution",
+    hx_agency_d: "Official agent for selected partners in Korea, China and the US, supporting market entry and distribution",
     about_eyebrow: "EXPERIENCE",
     about_title: "Thirty years in China, turned into results.",
     about_p1: "Our CEO built three decades of on-the-ground China experience — from a Peking University degree through roles in HR, HRIS and corporate strategy at startups, major Korean corporates, and a China-based battery equipment manufacturer. That experience shows up in results: managing Beijing Hyundai’s first-tier vendor operations, an LGE investment project, ERP/HR consulting for a major group, and EPC leadership on a battery cathode production line.",
@@ -742,7 +774,7 @@ const I18N = {
     greet_text: "Welcome to bm partners.<br>I’ve spent thirty years working on the ground between Korea and China, and I built this company to put that experience to work for our clients — in consulting, distribution and trade alike. We lead with trust, and we’re always glad to start a conversation.",
     greet_role: "CEO, bm partners",
     p_ptn: "Partnerships",
-    p_ptn_v: "3 legal &amp; administrative partners · 7 business partners (USA, Korea, China) · BMP China (opening soon)",
+    p_ptn_v: "3 legal &amp; administrative partners · 7 business partners (Korea, China, USA) · BMP China (opening soon)",
     p_loc: "Location",
     p_ct: "Contact",
     rep_name: "JEONG HYEONWOO",
@@ -753,7 +785,9 @@ const I18N = {
     svc_title: "Consulting, agency, investment, sourcing, distribution and trade — one connected practice.",
     cn_tag: "GLOBAL NETWORK",
     cn_title: "Partners across three countries.",
-    cn_desc: "We work with partners in the US, Korea and China — acting as official agent for some, and collaborating project by project with the rest.",
+    cn_desc: "We work with partners in Korea, China and the US — acting as official agent for some, and collaborating project by project with the rest.",
+    bp_tag: "BUSINESS PARTNERS",
+    bp_t: "Business Partners",
     al_c1: "USA",
     al_c1v: "AuthPay",
     al_c2: "KOREA",
@@ -816,7 +850,7 @@ const I18N = {
     wt_b: "Leased-facility operation built on partner collaboration",
     sb1: "Years of on-the-ground China experience",
     sb2: "Business areas",
-    sb3: "countries in our Global Network<br>USA, Korea, China, India, Russia",
+    sb3: "countries in our Global Network<br>Korea, China, USA, India, Russia",
     hq_tag: "Sourcing · Distribution · Trade · BMP China",
     hq_t: "China Sourcing, Distribution &amp; Trade",
     hq_o: "China sourcing, distribution and trade, including hotel room-management equipment supply and trade-fund management",
@@ -855,7 +889,7 @@ const I18N = {
     hx_sourcing_d: "甄选高性价比的优质生产商",
     hx_agency_a: "代理",
     hx_agency_b: "Agency",
-    hx_agency_d: "作为美国、韩国、中国部分合作伙伴的官方代理，支持其市场拓展与流通",
+    hx_agency_d: "作为韩国、中国、美国部分合作伙伴的官方代理，支持其市场拓展与流通",
     about_eyebrow: "EXPERIENCE",
     about_title: "三十年深耕中国，<span class=\"nw\">经验成就价值。</span>",
     about_p1: "bmp创始人毕业于北京大学，先后在初创企业、韩国大型企业及中国锂电池设备企业深耕HRM、HRIS与经营战略领域，积累了三十年扎实的中国经验。从主导北京现代一级供应商管理、参与LGE投资项目，到大型企业ERP人力咨询、锂电池正极材料生产线EPC项目统筹，每一段经历都转化为客户可感知的实际价值。",
@@ -865,7 +899,7 @@ const I18N = {
     greet_text: "感谢您关注bm partners。<br>三十年来，我们扎根中韩商业一线，把这些经验转化为客户成长所需要的执行力——从咨询到流通、贸易，全程相伴。诚信为本，携手共赢，是我们始终坚持的原则。",
     greet_role: "bm partners 创始人",
     p_ptn: "合作伙伴",
-    p_ptn_v: "3家法律行政支持合作伙伴 · 7家业务合作伙伴（美国、韩国、中国）· BMP China（筹备中）",
+    p_ptn_v: "3家法律行政支持合作伙伴 · 7家业务合作伙伴（韩国、中国、美国）· BMP China（筹备中）",
     p_loc: "地址",
     p_ct: "联系方式",
     rep_name: "丁炫宇",
@@ -876,7 +910,9 @@ const I18N = {
     svc_title: "咨询、代理、投资、寻源、流通、贸易，<span class=\"nw\">六位一体。</span>",
     cn_tag: "GLOBAL NETWORK",
     cn_title: "携手三国合作伙伴，<span class=\"nw\">共拓市场。</span>",
-    cn_desc: "bmp与美国、韩国、中国的合作伙伴携手：对其中签订官方代理协议的伙伴，全力支持其市场拓展与寻源、流通业务；其余伙伴则按项目开展合作。",
+    cn_desc: "bmp与韩国、中国、美国的合作伙伴携手：对其中签订官方代理协议的伙伴，全力支持其市场拓展与寻源、流通业务；其余伙伴则按项目开展合作。",
+    bp_tag: "商务合作",
+    bp_t: "业务合作伙伴",
     al_c1: "美国",
     al_c1v: "AuthPay",
     al_c2: "韩国",
@@ -939,7 +975,7 @@ const I18N = {
     wt_b: "设施租赁式运营，依托合作伙伴协作",
     sb1: "年中国一线经验",
     sb2: "业务领域",
-    sb3: "个国家的全球网络<br>美国、韩国、中国、印度、俄罗斯",
+    sb3: "个国家的全球网络<br>韩国、中国、美国、印度、俄罗斯",
     hq_tag: "寻源 · 流通 · 贸易 · BMP China",
     hq_t: "中国寻源 · 流通 · 贸易",
     hq_o: "开展中国寻源、流通与贸易业务，并提供酒店客房管理设备供货代理及贸易资金运作",
